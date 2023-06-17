@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2eadf;
+}
+
+.container{
+  position: relative;
+  width: 340px;
+  height: 480px;
+  background: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+}
+header{
+  position: relative;
+  background: #008069;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+header .action{
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+header .action a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.tabs input{
+  visibility: hidden;
+  display: none;
+}
+
+.buttons{
+  position: relative;
+  display: flex;
+  background: #008069;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.buttons label{
+  width: 33.33%;
+  color: #fff;
+  opacity: 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 5px 0;
+  
+}
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3){
+  opacity: 1;
+}
+
+.underline{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 33.33%;
+  height: 3px;
+  background: #fff;
+  transition: 0.5s;
+}
+/* .tabs input:nth-child(1):checked ~ .buttons .underline{
+  left: 0;
+}
+.tabs input:nth-child(2):checked ~ .buttons .underline{
+  left: 33.33%;
+}
+.tabs input:nth-child(3):checked ~ .buttons .underline{
+  left: 66.66%;
+} */
+
+.content{
+  position: relative;
+  width: calc(3 * 340px);
+  display: flex;
+
+  transition: 0.5s;
+}
+
+.content .box{
+  position: relative;
+  width: 340px;
+}
+
+/* .tabs input:nth-child(1):checked ~ .content{
+  left: calc(340px * 0);
+}
+
+.tabs input:nth-child(2):checked ~ .content{
+  left: calc(340px * -1);
+}
+
+.tabs input:nth-child(3):checked ~ .content{
+  left: calc(340px * -2);
+} */
+
+.tabs input:checked ~ .content{
+  left: calc(-1 * var(--i) * 340px);
+}
+.tabs input:checked ~ .buttons .underline{
+  left: calc(var(--i) * 33.33%)
+} 
