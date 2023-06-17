@@ -130,3 +130,99 @@ header .action a{
 .tabs input:checked ~ .buttons .underline{
   left: calc(var(--i) * 33.33%)
 } 
+
+.chatList{
+  position: relative;
+  width: 100%;
+  height: 410px;
+  overflow-y: auto;
+}
+.chatList .chat{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px 10px;
+}
+
+.chatList .chat:hover{
+  background: #f5f5f5;
+}
+
+.chatList .chat .avatar{
+  position: relative;
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chatList .chat .avatar img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chatList .chat .details{
+  position: relative;
+  width: 100%;
+}
+.chatList .chat .details .chatHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chatList .chat .details .chatHeader .time{
+  font-size: 0.75em;
+  color: #555;
+}
+
+.chatList .chat .details .chatBody{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatList .chat .details .chatBody p{
+  color: #555;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+}
+
+.chatList .chat.unread .details .chatHeader .time{
+  color: #06d755;
+}
+
+.chatList .chat.unread .details .chatBody p{
+  color: #111;
+  font-weight: 600 ;
+}
+
+.chatList .chat.unread .details .chatBody b{
+  background: #06d755;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75em;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: #bbb;
+}
