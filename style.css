@@ -226,3 +226,39 @@ header .action a{
 ::-webkit-scrollbar-thumb{
   background: #bbb;
 }
+
+.status .plus{
+  position: absolute;
+  top: 38px;
+  left: 40px;
+  width: 25px;
+  height: 25px;
+  background: #008069;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  direction: 1.2em;
+  font-weight: 700;
+}
+
+.box label{
+  padding: 0 15px;
+  font-weight: 600;
+  font-size: .85em;
+  color: #555;
+}
+
+.unseen .avatar
+{
+  box-shadow: 0 0 0 2px #fff,
+  0 0 0 4px #008069;
+}
+
+.seen .avatar
+{
+  box-shadow: 0 0 0 2px #fff,
+  0 0 0 4px #bbb;
+}
