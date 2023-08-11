@@ -262,3 +262,28 @@ header .action a{
   box-shadow: 0 0 0 2px #fff,
   0 0 0 4px #bbb;
 }
+
+.green{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #008069;
+  color: #fff;
+  font-size: 1.5em;
+  rotate: -45deg;
+}
+.incoming ion-icon{
+  color: #0f0;
+  rotate: 45deg;
+
+}
+.outgoing ion-icon{
+  color: #f00;
+  rotate: 45deg;
+}
+
+.call{
+  font-size: 1.5em;
+  color: #008069;
+
+}
