@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <title>WhatsApp Clone</title>
 </head>
+
 <body>
     <div class="container">
         <header>
             <a href="#" class="logo">WhatsApp</a>
             <div class="action">
-                <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
-                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-                <a href="#"><ion-icon name="ellipsis-vertical"></ion-icon></a>
+                <a href="#">
+                    <ion-icon name="camera-outline"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="search-outline"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                </a>
             </div>
         </header>
         <div class="tabs">
             <input style="--i:0;" type="radio" name="group" id="chats" checked>
             <input style="--i:1;" type="radio" name="group" id="status">
-            <input style="--i:2;" type="radio" name="group" id="calls" >
+            <input style="--i:2;" type="radio" name="group" id="calls">
 
             <div class="buttons">
                 <label for="chats">Chats</label>
@@ -30,20 +38,24 @@
             </div>
 
             <div class="quickBtn">
-                <div class="btn"><ion-icon name="chatbubble"></ion-icon></div>
+                <div class="btn">
+                    <ion-icon name="chatbubble"></ion-icon>
+                </div>
                 <div class="btn">
                     <div class="pencil">
-                        <ion-icon name="pencil"></ion-icon>    
+                        <ion-icon name="pencil"></ion-icon>
                     </div>
                     <ion-icon name="camera"></ion-icon>
                 </div>
-                <div class="btn"><ion-icon name="call"></ion-icon></div>
+                <div class="btn">
+                    <ion-icon name="call"></ion-icon>
+                </div>
             </div>
 
             <div class="content">
                 <div class="box chats">
                     <div class="chatList">
-                        <div class="chat unread">
+                        <div class="chat unread open">
                             <div class="avatar">
                                 <img src="img1.jpg" alt="">
                             </div>
@@ -165,7 +177,7 @@
                     <div class="chatList">
                         <div class="chat">
                             <div class="avatar">
-                                <img src="img1.jpg" id="sample" >
+                                <img src="img1.jpg" id="sample">
                             </div>
                             <div class="plus">+</div>
                             <div class="details">
@@ -204,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                        <label >Viewed Updates</label>
+                        <label>Viewed Updates</label>
                         <div class="chat seen">
                             <div class="avatar">
                                 <img src="img4.jpeg" alt="">
@@ -259,7 +271,9 @@
                                     <h4>Paul Johnson</h4>
                                 </div>
                                 <div class="chatBody incoming">
-                                    <p><ion-icon name="arrow-down"></ion-icon>08/11/2023, 21:15</p>
+                                    <p>
+                                        <ion-icon name="arrow-down"></ion-icon>08/11/2023, 21:15
+                                    </p>
                                 </div>
                             </div>
                             <ion-icon name="call" class="call"></ion-icon>
@@ -273,34 +287,85 @@
                                     <h4>Sarah</h4>
                                 </div>
                                 <div class="chatBody outgoing">
-                                    <p><ion-icon name="arrow-up"></ion-icon>08/05/2023, 12:00</p>
+                                    <p>
+                                        <ion-icon name="arrow-up"></ion-icon>08/05/2023, 12:00
+                                    </p>
                                 </div>
                             </div>
                             <ion-icon name="call" class="call"></ion-icon>
 
                         </div>
+                    </div>
                 </div>
             </div>
+            
+<div class="chatBox">
+    <div class="header">
+        <div class="imgContent">
+            <ion-icon name="arrow-back" class="back"></ion-icon>
+            <div class="imgBx">
+                <img src="img1.jpg">
+            </div>
+            <h3>Vahid Rahmanifard<br><span>Online</span></h3>
+        </div>
+        <div class="actionBtns">
+            <ion-icon name="videocam"></ion-icon>
+            <ion-icon name="call"></ion-icon>
+            <ion-icon name="ellipsis-vertical"></ion-icon>
         </div>
     </div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script>
-    let radioList = document.querySelectorAll('input');
-    let underLine = document.querySelector('.underline');
-    let content = document.querySelector('.content');
+    <div class="messageBox">
+        <div class="message">How to make WhatsApp clone using html and css?<br><span class="time">10:19</span></div>
+        <div class="message">Please answer my question<br><span class="time">10:21</span></div>
+        <div class="otherMessage">It's so easy. You just need to follow this tutorial<br><span class="time">10:30</span></div>
+    </div>
+    <div class="messageInput">
+        <div class="input">
+            <ion-icon name="happy"></ion-icon>
+            <input type="text" placeholder="Message">
+            <ion-icon name="attach" class="deg45"></ion-icon>
+            <ion-icon name="camera"></ion-icon>
 
-    function setIndex(){
-        const i = this.style.getPropertyValue('--i');
-        underLine.style.setProperty('--i', i);
-        content.style.setProperty('--i', i);
-    }
+        </div>
+        <div class="mic">
+            <ion-icon name="mic"></ion-icon>
 
-    radioList.forEach((item) =>
-    item.addEventListener('click', setIndex))
-    
-</script>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            let radioList = document.querySelectorAll('input');
+            let underLine = document.querySelector('.underline');
+            let content = document.querySelector('.content');
+
+            function setIndex() {
+                const i = this.style.getPropertyValue('--i');
+                underLine.style.setProperty('--i', i);
+                content.style.setProperty('--i', i);
+            }
+
+            radioList.forEach((item) =>
+                item.addEventListener('click', setIndex))
+
+            let back = document.querySelector('.back');
+            let chatBox = document.querySelector('.chatBox');
+            let open = document.querySelector('.open');
+
+            back.onclick = function() {
+                chatBox.classList.add('hide');
+            }
+
+            open.onclick = function() {
+                chatBox.classList.remove('hide');
+            }
+
+        </script>
 
 
 </body>
+
 </html>
